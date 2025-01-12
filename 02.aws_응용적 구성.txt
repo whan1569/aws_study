@@ -1,0 +1,32 @@
+
+응용적 구성:
+
+1. 컴퓨팅(Compute)
+   - EC2, Lambda, ECS, EKS 등 다양한 서비스로 가상 서버 및 서버리스 애플리케이션을 구축.
+
+2. 스토리지(Storage)
+   - S3, EBS, Glacier, FSx 등의 다양한 저장소 서비스를 통해 데이터 관리.
+
+3. 데이터베이스(Database)
+   - RDS, DynamoDB, Aurora, Redshift 등 다양한 데이터베이스 서비스 제공.
+
+4. 네트워크(Networking)
+   - VPC, Route 53, CloudFront, ELB 등 네트워크 관련 서비스를 제공하여 트래픽 관리 및 보안.
+
+5. 보안(Security)
+   - IAM, Cognito, GuardDuty, Shield 등 보안 관리 서비스 제공.
+
+6. 관리 및 모니터링(Management and Monitoring)
+   - CloudWatch, CloudTrail, AWS Config 등 관리 및 모니터링 도구 제공.
+
+7. AI/ML (Artificial Intelligence / Machine Learning)
+   - SageMaker, Rekognition, Polly, Lex 등 머신러닝 및 AI 서비스.
+
+8. Analytics (분석)
+   - Athena, Kinesis, Glue 등 분석 및 데이터 처리 서비스.
+
+9. 개발자 도구(Developer Tools)
+   - CodeBuild, CodePipeline, CodeDeploy 등 개발 및 배포 자동화 도구.
+
+10. IoT (Internet of Things)
+    - IoT Core, Greengrass 등 IoT 디바이스 관리 및 데이터 처리 서비스.
