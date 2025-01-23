@@ -1,0 +1,24 @@
+1. PuTTY 설치
+   - PuTTY를 다운로드하고 설치 (https://www.putty.org/)
+
+2. PEM 파일을 PPK 형식으로 변환
+   - PuTTYgen 실행
+   - Load 버튼 클릭 후 Study.pem 파일 선택
+     * 파일 형식을 All Files (*.*)로 변경하여 Study.pem 선택 가능
+   - Save private key 버튼 클릭하여 PPK 형식으로 저장
+     * 예: Study.ppk로 저장
+     * "Are you sure you want to save the key without a passphrase?" 메시지가 뜨면 Yes 클릭
+
+3. PuTTY에서 EC2 인스턴스에 접속
+   - PuTTY 실행
+   - Host Name (or IP address)에 EC2 인스턴스의 공인 IP 주소 입력
+     * 예: ec2-xx-xx-xx-xx.compute-1.amazonaws.com 또는 xx.xx.xx.xx
+   - Connection type은 SSH 선택
+   - SSH > Auth로 이동
+     * Private key file for authentication에 Study.ppk 파일 선택
+   - Open 클릭하여 접속 시도
+     * "Are you sure you want to continue connecting?" 메시지가 뜨면 Yes 클릭
+
+4. 접속 후
+   - 접속 성공 시 ec2-user로 로그인
+   - 필요한 작업 진행 가능

@@ -1,0 +1,49 @@
+1. S3 버킷 생성
+   1. AWS Management Console에 로그인.
+   2. S3 서비스로 이동.
+   3. 버킷 생성(Create Bucket)을 클릭.
+      - 버킷 이름: 고유한 이름 지정 (예: my-static-website).
+      - 리전: EC2와 동일한 리전 선택.
+   4. 퍼블릭 액세스 차단 설정에서 일부를 해제.
+      - "퍼블릭 액세스 차단 설정" 중 퍼블릭 액세스 허용.
+   5. 버킷 생성 완료.
+
+2. 정적 웹사이트 호스팅 활성화
+   1. 생성한 S3 버킷 클릭.
+   2. 속성(Properties) 탭으로 이동.
+   3. 정적 웹사이트 호스팅(Static Website Hosting) 섹션 찾기.
+   4. 다음 설정 적용:
+      - 정적 웹사이트 호스팅 사용 활성화.
+      - 인덱스 문서: index.html 입력.
+      - 오류 문서(선택): error.html 입력.
+   5. 저장 클릭.
+
+3. 파일 업로드
+   1. 객체(Objects) 탭으로 이동.
+   2. 정적 웹사이트에서 사용할 HTML, CSS, JavaScript 파일을 업로드.
+      - 폴더 업로드를 이용해 파일 구조를 유지 가능.
+   3. 업로드 후 권한 탭에서 파일을 퍼블릭으로 설정.
+      - ACL(Access Control List)에서 Everyone에게 읽기 권한을 부여.
+
+4. 퍼블릭 액세스 및 버킷 정책 설정
+   1. 권한(Permissions) 탭으로 이동.
+   2. 버킷 정책(Bucket Policy) 클릭.
+   3. 다음 정책 추가(필요시 버킷 이름 변경):
+
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "PublicReadGetObject",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::study-b/*"
+    }
+  ]
+}
+
+
+5. 웹사이트 확인
+   1. S3 버킷 속성(Properties) 탭에서 정적 웹사이트 호스팅 URL 확인.
+   2. 브라우저에서 URL 열기.
